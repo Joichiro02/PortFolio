@@ -1,4 +1,32 @@
+$main-bg-color: #FFFFFF;
+$secondary-bg-color: #FFB400;
+$title-font-color: #2B2B2B;
+$subtitle-font-color: #767676;
+
 .blog {
-    height: 100vh;
-    background-color: fuchsia;
+    margin: 30px 0 20px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(46, 223, 236);
+    .title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 123.6%;
+        text-transform: capitalize;
+        color: $title-font-color;
+    }
+
+    .description {
+        margin: 25px 0 0;
+        width: 438px;
+        height: 68px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        text-align: center;
+        text-transform: capitalize;
+        color: $subtitle-font-color;
+    }
 }

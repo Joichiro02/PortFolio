@@ -1,79 +1,117 @@
+$main-bg-color: #FFFFFF;
+$secondary-bg-color: #FFB400;
+$title-font-color: #2B2B2B;
+$subtitle-font-color: #767676;
+
 .curriculumVitae {
+    padding: 20px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    height: 100vh;
-    background-color: aqua;
-
-    .title {
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 123.6%;
-        text-transform: capitalize;
-        color: #2B2B2B;
-    }
-
-    .subtitle {
-        margin: 25px 0 0;
-        width: 438px;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 24px;
-        text-align: center;
-        text-transform: capitalize;
-        color: #767676;
-    }
-
-    .categories {
-        width: 100%;
+    width: 100%;
+    .educationContainer,
+    .workContainer{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        .category {
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            width: 310px;
-            height: 225px;
-            background: #FFFFFF;
-
-            .image {
-                margin: 35px 0 0;
-                height: 53px;
-                width: 65px;
+        flex-direction: column;
+        .title{
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 123.6%;
+            text-transform: capitalize;
+            color: $title-font-color;
+        }
+        .description{
+            margin: 25px 0 0;
+            width: 438px;
+            height: 68px;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            text-align: center;
+            text-transform: capitalize;
+            color: $subtitle-font-color;
+        }
+        .educationContent{
+            padding: 51px 37px 20px;
+            margin: 50px 0 0;
+            width: 970px;
+            height: 632px;
+            background: $main-bg-color;
+            .divider{
+                margin: 25px 0;
+                padding: 0 3px;
+                height: 1.5px;
+                background: #F0F0F6;
             }
-
-            .title {
-                margin: 34px 0 0;
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 123.6%;
-                text-transform: capitalize;
-                color: #2B2B2B;
-            }
-
-            .subtitle {
-                width: 260px;
-                margin: 15px 0 0;
-                font-weight: 400;
-                font-size: 15px;
-                line-height: 24px;
-                text-align: center;
-                text-transform: capitalize;
-                color: #767676;
-            }
-
-            .orderBtn {
-                margin: 15px 0 0;
-                font-weight: 700;
-                font-size: 12px;
-                line-height: 14px;
-                color: #FFB400;
+            .content{
+                display: grid;
+                grid-template-columns: 2fr 3fr;
+                width: 904px;
+                height: 150px;
+                .left{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .schoolName{
+                        margin: 4px 0 0;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 123.6%;
+                        text-transform: capitalize;
+                        color: $title-font-color;
+                    }
+                    .details{
+                        margin: 25px 0 0;
+                        .status{
+                            margin: 0 28px 0 0;
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 24px;
+                            text-transform: capitalize;
+                            color: $title-font-color;
+                        }
+                        .year{
+                            width: 111px;
+                            height: 18px;
+                            background: $secondary-bg-color;
+                            border-radius: 1px;
+                            font-weight: 400;
+                            font-size: 10px;
+                            line-height: 100.9%;
+                            color: $main-bg-color;
+                            padding: 4px 7px;
+                        }
+                    }
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .title{
+                        margin: 4px 0 0;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 123.6%;
+                        text-transform: capitalize;
+                        color: $title-font-color;
+                    }
+                    .description{
+                        margin: 25px 0 0;
+                        width: 536px;
+                        height: 100px;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 24px;
+                        text-transform: capitalize;
+                        color: $subtitle-font-color;
+                        text-align: left;
+                    }
+                }
             }
         }
+    }
+    .workContainer{
+        margin: 70px 0 0;
     }
 }
