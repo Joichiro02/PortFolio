@@ -7,15 +7,13 @@ import twitter from "./twitter@2x.png";
 import youtube from "./youtube@2x.png";
 import icon from "./icon@2x.png";
 import download from "./download@2x.png";
-import blog from "./blog@2x.png";
-import contact from "./contact@2x.png";
-import contrast from "./contrast@2x.png";
-import cv from "./cv@2x.png";
-import portfolio from "./portfolio@2x.png";
-import service from "./services@2x.png";
-import home from "./home@2x.png";
 import profilePic from "./profilePic@2x.png";
 import arrow from "./arrow@2x.png";
+import code from "./code@2x.png";
+import draw from "./draw@2x.png";
+import game from "./draw@2x.png";
+import microphone from "./microphone@2x.png";
+import photographer from "./photographer@2x.png";
 
 export {
     profile,
@@ -27,13 +25,11 @@ export {
     youtube,
     icon,
     download,
-    blog,
-    contact,
-    contrast,
-    cv,
-    portfolio,
-    service,
-    home,
     profilePic,
-    arrow
+    arrow,
+    code,
+    draw,
+    game,
+    microphone,
+    photographer
 }

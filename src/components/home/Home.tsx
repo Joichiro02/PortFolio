@@ -1,25 +1,25 @@
 import LeftContent from "../leftContent/LeftContent";
 import RightContent from "../rightContent/RightContent";
-import {profilePic, arrow} from "../../assets/images";
 import "./styles.scss";
+import Menu from "../menu/Menu";
+import Services from "../service/Service";
+import CurriculumVitae from "../cv/CurriculumVitae";
+import Portfolio from "../portfolio/Portfoio";
+import Blog from "../blog/Blog";
+import Contact from "../contact/Contact";
 
 const Home = () => {
     return(
         <div className="homeContainer">
             <LeftContent/>
-            <div className="mainContent">
-                <div className="mainMenu">
-                    <div className="leftContent">
-                        <h1 className="title">I’m Rayan Adlrdard <span>Font - End</span> Developer </h1>
-                        <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.</p>
-                        <div className="hireBtnContainer">
-                            <div className="hireBtnContent">
-                                <h4 className="label">HIRE ME</h4>
-                                <img className="arrow" src={arrow} alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <img src={profilePic} alt="" />
+            <div className="mainContainer">
+                <div className="mainContent">
+                    <Menu/>
+                    <Services/>
+                    <CurriculumVitae/>
+                    <Portfolio/>
+                    <Blog/>
+                    <Contact/>
                 </div>
             </div>
             <RightContent/>

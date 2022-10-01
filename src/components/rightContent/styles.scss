@@ -7,8 +7,7 @@
     background-color: #FFFFFF;
     .contrast {
         margin: 52px 0 0;
-        width: 25px;
-        height: 25px;
+        font-size: 25px;
         &:hover {
             cursor: pointer;
         }
@@ -28,16 +27,22 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            &:nth-of-type(1) {
+            &.active{
                 background: #FFB400;
+                .icon{
+                    color: #2B2B2B;
+                }
             }
             &:hover {
                 background: #FFB400;
                 cursor: pointer;
+                .icon {
+                    color: #2B2B2B;
+                }
             }
             .icon {
-                width: 18px;
-                height: 18px;
+                font-size: 18px;
+                color: #767676;
             }
         }
     }
