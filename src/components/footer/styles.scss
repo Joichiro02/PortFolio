@@ -1,0 +1,30 @@
+.footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .logosContainer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 970px;
+        height: 140px;
+        .logo{
+            width: 140px;
+            height: 140px;
+        }
+    }
+    .footerContent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 970px;
+        height: 60px;
+        background: #FFFFFF;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: #2B2B2B;
+        margin: 89px 0 0;
+    }
+}
