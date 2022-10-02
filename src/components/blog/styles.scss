@@ -9,7 +9,6 @@ $subtitle-font-color: #767676;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(46, 223, 236);
     .title {
         font-weight: 700;
         font-size: 32px;
@@ -17,7 +16,6 @@ $subtitle-font-color: #767676;
         text-transform: capitalize;
         color: $title-font-color;
     }
-
     .description {
         margin: 25px 0 0;
         width: 438px;
@@ -28,5 +26,64 @@ $subtitle-font-color: #767676;
         text-align: center;
         text-transform: capitalize;
         color: $subtitle-font-color;
+    }
+    .blogs{
+        margin: 50px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 474px;
+        width: 100%;
+        .blogContent{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 310px;
+            height: 474px;
+            background: $main-bg-color;
+            .blogImg{
+                width: 310px;
+                height: 300px;
+            }
+            .infoContainer{
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                padding: 25px;
+                .title{
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 123.6%;
+                    text-transform: capitalize;
+                    color: $title-font-color;
+                }
+                .blogDescription{
+                    margin: 8px 0 0;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 24px;
+                    text-transform: capitalize;
+                    color: $subtitle-font-color;
+                }
+                .learnMore{
+                    margin: 9px 0 0;
+                    display: flex;
+                    align-items: center;
+                    .text{
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 123.6%;
+                        text-transform: capitalize;
+                        color: $secondary-bg-color;
+                    }
+                    .arrow{
+                        font-size: 20px;
+                        color: $secondary-bg-color;
+                    }
+                }
+            }
+        }
     }
 }
