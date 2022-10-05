@@ -1,7 +1,36 @@
 import {code, draw, game, microphone, photographer} from "../../assets/images";
 import {BsCheck2, BsPersonCircle} from "react-icons/bs";
 import {AiOutlinePlus, AiFillStar} from "react-icons/ai";
+import { motion } from "framer-motion";
 import "./styles.scss";
+
+const offerServices = [
+    {
+        image: code,
+        title: "web development",
+        subtitle: "blog, e-commerce"
+    },
+    {
+        image: draw,
+        title: "web development",
+        subtitle: "blog, e-commerce"
+    },
+    {
+        image: game,
+        title: "web development",
+        subtitle: "blog, e-commerce"
+    },
+    {
+        image: microphone,
+        title: "web development",
+        subtitle: "blog, e-commerce"
+    },
+    {
+        image: photographer,
+        title: "web development",
+        subtitle: "blog, e-commerce"
+    },
+]
 
 const Services = () => {
     return(
@@ -10,35 +39,32 @@ const Services = () => {
                 <h4 className="title">my services</h4>
                 <p className="subtitle">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</p>
                 <div className="categories">
+                    {
+                        offerServices.map((service) => (
+                            <motion.div className="category" 
+                            whileHover={{ rotateX: 180 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{duration: 1}}
+                                >
+                                    <motion.div className="front" whileHover={{zIndex: 5}} transition={{delay: .5}}>
+                                        <img className="image" src={service.image} alt="" />
+                                        <h6 className="title">{service.title}</h6>
+                                        <p className="subtitle">{service.subtitle}</p>
+                                    </motion.div>
+                                    <motion.div className="back"  whileHover={{zIndex: 15}} transition={{delay: .5}}>
+                                        <h6 className="title">{service.title}</h6>
+                                        <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. </p>
+                                        <span className="orderBtn">ORDER NOW</span>
+                                    </motion.div>
+                            </motion.div>
+                        ))
+                    }
                     <div className="category">
-                        <img className="image" src={code} alt="" />
-                        <h6 className="title">web development</h6>
-                        <p className="subtitle">blog, e-commerce</p>
-                    </div>
-                    <div className="category">
-                        <img className="image" src={draw} alt="" />
-                        <h6 className="title">web development</h6>
-                        <p className="subtitle">blog, e-commerce</p>
-                    </div>
-                    <div className="category">
-                        <img className="image" src={microphone} alt="" />
-                        <h6 className="title">web development</h6>
-                        <p className="subtitle">blog, e-commerce</p>
-                    </div>
-                    <div className="category">
-                        <img className="image" src={game} alt="" />
-                        <h6 className="title">web development</h6>
-                        <p className="subtitle">blog, e-commerce</p>
-                    </div>
-                    <div className="category">
-                        <img className="image" src={photographer} alt="" />
-                        <h6 className="title">web development</h6>
-                        <p className="subtitle">blog, e-commerce</p>
-                    </div>
-                    <div className="category">
-                        <h6 className="title">advertising</h6>
-                        <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. </p>
-                        <span className="orderBtn">ORDER NOW</span>
+                        <div className="front">
+                            <h6 className="title">advertising</h6>
+                            <p className="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. </p>
+                            <span className="orderBtn">ORDER NOW</span>
+                        </div>
                     </div>
                 </div>
             </div>

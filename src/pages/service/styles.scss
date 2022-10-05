@@ -8,9 +8,8 @@ $subtitle-font-color: #767676;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 20px 0 50px;
+    padding: 20px 0;
     .serviceMain{
-        margin: 20px 0 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -40,42 +39,63 @@ $subtitle-font-color: #767676;
             justify-content: space-between;
             flex-wrap: wrap;
             .category {
-                margin: 10px 0;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                width: 310px;
-                height: 225px;
-                background: $main-bg-color;
-                .image {
-                    margin: 35px 0 0;
-                    height: 53px;
-                    width: 65px;
+                position: relative;
+                // &:hover{
+                //     .front{
+                //         z-index: 5;
+                //     }
+                //     .back{
+                //         z-index: 10;
+                //     }
+                // }
+                .front,
+                .back{
+                    position: relative;
+                    margin: 10px 0;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 310px;
+                    height: 225px;
+                    background: $main-bg-color;
+                    z-index: 10;
+                    .image {
+                        margin: 35px 0 0;
+                        height: 53px;
+                        width: 65px;
+                    }
+                    .title {
+                        margin: 34px 0 0;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 123.6%;
+                        text-transform: capitalize;
+                        color: $title-font-color;
+                    }
+                    .subtitle {
+                        width: 260px;
+                        margin: 15px 0 0;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 24px;
+                        text-align: center;
+                        text-transform: capitalize;
+                        color: $subtitle-font-color;
+                    }
+                    .orderBtn {
+                        margin: 15px 0 0;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: $secondary-bg-color;
+                    }
                 }
-                .title {
-                    margin: 34px 0 0;
-                    font-weight: 500;
-                    font-size: 18px;
-                    line-height: 123.6%;
-                    text-transform: capitalize;
-                    color: $title-font-color;
-                }
-                .subtitle {
-                    width: 260px;
-                    margin: 15px 0 0;
-                    font-weight: 400;
-                    font-size: 15px;
-                    line-height: 24px;
-                    text-align: center;
-                    text-transform: capitalize;
-                    color: $subtitle-font-color;
-                }
-                .orderBtn {
-                    margin: 15px 0 0;
-                    font-weight: 700;
-                    font-size: 12px;
-                    line-height: 14px;
-                    color: $secondary-bg-color;
+                .back{
+                    z-index: 5;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: rotateX(180deg);
                 }
             }
         }

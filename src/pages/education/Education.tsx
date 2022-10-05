@@ -1,6 +1,6 @@
 import "./styles.scss";
 
-const CurriculumVitae = () => {
+const Education = () => {
     return(
         <div className="curriculumVitae">
             <div className="educationContainer">
@@ -101,4 +101,4 @@ const CurriculumVitae = () => {
     )
 }
 
-export default CurriculumVitae;
+export default Education;

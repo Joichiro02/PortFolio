@@ -1,11 +1,15 @@
+$main-bg-color: #FFFFFF;
+$secondary-bg-color: #FFB400;
+$title-font-color: #2B2B2B;
+$subtitle-font-color: #767676;
+
 .leftMenu {
     width: 290px;
     height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #FFFFFF;
-
+    background-color: $main-bg-color;
     .profile {
         margin: 50px 46px 0 40px;
         width: 219px;
@@ -13,12 +17,10 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-
         .profileImg {
             width: 150px;
             height: 150px;
         }
-
         .name {
             margin: 31px 0 0;
             font-weight: 500;
@@ -27,38 +29,32 @@
             display: flex;
             align-items: center;
             text-transform: capitalize;
-            color: #2B2B2B;
+            color: $title-font-color;
         }
-
         .positionName {
             margin: 15px 0;
             font-weight: 400;
             font-size: 15px;
             line-height: 24px;
             text-transform: capitalize;
-            font-feature-settings: 'calt' off, 'kern' off;
-            color: #767676;
+            color: $subtitle-font-color;
         }
-
         .socialIcon {
             width: 219px;
             height: 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             img {
                 width: 24px;
                 height: 24px;
             }
         }
     }
-
     .infoContainer {
         margin: 25px 0 15px;
         border-top: 1.5px solid #F0F0F6;
         overflow-y: scroll;
-
         &::-webkit-scrollbar {
             display: none;
         }
@@ -69,7 +65,6 @@
                 width: 100%;
                 margin: 25px 0;
             }
-
             .aboutContainer,
             .languageContainer,
             .skillsContainer,
@@ -77,46 +72,40 @@
                 margin: 25px 0 0;
                 width: 220px;
             }
-
             .aboutContainer {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
                 height: 126px;
-
                 .aboutContent {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     width: 100%;
-
                     .label {
                         width: fit-content;
                         padding: 0 5px;
                         height: 24px;
-                        background: #FFB400;
+                        background: $secondary-bg-color;
                         font-weight: 400;
                         font-size: 15px;
                         line-height: 24px;
                         text-transform: capitalize;
-                        color: #2B2B2B;
+                        color: $title-font-color;
                     }
                 }
             }
-
             .languageContainer {
                 display: flex;
                 flex-direction: column;
-
                 .title {
                     font-weight: 500;
                     font-size: 18px;
                     line-height: 123.6%;
                     text-transform: capitalize;
-                    color: #2B2B2B;
+                    color: $title-font-color;
                 }
-
                 .languageTypes {
                     margin: 15px 0 0;
                     display: flex;
@@ -125,7 +114,6 @@
                     flex-direction: column;
                     width: 100%;
                     height: 100%;
-
                     .languageContent {
                         display: flex;
                         align-items: center;
@@ -133,29 +121,25 @@
                         flex-direction: column;
                         width: 100%;
                         height: 100%;
-
                         .languagetype {
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
                             width: 100%;
                         }
-
                         .progress {
                             margin: 10px 0;
                             width: 100%;
                             height: 6px;
-                            border: 0.5px solid #FFB400;
+                            border: 0.5px solid $secondary-bg-color;
                             border-radius: 30px;
-
                             &::-webkit-progress-bar {
                                 padding: 1px;
                                 border-radius: 30px;
-                                background-color: #FFFFFF;
+                                background-color: $main-bg-color;
                             }
-
                             &::-webkit-progress-value {
-                                background: #FFB400;
+                                background: $secondary-bg-color;
                                 border-radius: 30px;
                                 height: 2px;
                             }
@@ -163,19 +147,16 @@
                     }
                 }
             }
-
             .skillsContainer {
                 display: flex;
                 flex-direction: column;
-
                 .title {
                     font-weight: 500;
                     font-size: 18px;
                     line-height: 123.6%;
                     text-transform: capitalize;
-                    color: #2B2B2B;
+                    color: $title-font-color;
                 }
-
                 .skillsTypes {
                     margin: 15px 0 0;
                     display: flex;
@@ -184,7 +165,6 @@
                     flex-direction: column;
                     width: 100%;
                     height: 100%;
-
                     .skillsContent {
                         display: flex;
                         align-items: center;
@@ -192,29 +172,25 @@
                         flex-direction: column;
                         width: 100%;
                         height: 100%;
-
                         .skillstype {
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
                             width: 100%;
                         }
-
                         .progress {
                             margin: 10px 0;
                             width: 100%;
                             height: 6px;
-                            border: 0.5px solid #FFB400;
+                            border: 0.5px solid $secondary-bg-color;
                             border-radius: 30px;
-
                             &::-webkit-progress-bar {
                                 padding: 1px;
                                 border-radius: 30px;
-                                background-color: #FFFFFF;
+                                background-color: $main-bg-color;
                             }
-
                             &::-webkit-progress-value {
-                                background: #FFB400;
+                                background: $secondary-bg-color;
                                 border-radius: 30px;
                                 height: 2px;
                             }
@@ -222,19 +198,16 @@
                     }
                 }
             }
-
             .extraSkillsContainer {
                 display: flex;
                 flex-direction: column;
-
                 .title {
                     font-weight: 500;
                     font-size: 18px;
                     line-height: 123.6%;
                     text-transform: capitalize;
-                    color: #2B2B2B;
+                    color: $title-font-color;
                 }
-
                 .extraSkillsTypes {
                     display: flex;
                     align-items: center;
@@ -242,45 +215,40 @@
                     flex-direction: column;
                     width: 100%;
                     height: 100%;
-
                     .extraSkillsContent {
                         margin: 5px 0 0;
                         display: flex;
                         align-items: center;
                         width: 100%;
                         height: 100%;
-
                         .icon {
                             width: 15px;
                             height: 15px;
                         }
-
                         .extraSkillsName {
                             margin: 0 15px;
                             font-weight: 400;
                             font-size: 15px;
                             line-height: 24px;
                             text-transform: capitalize;
-                            font-feature-settings: 'calt' off, 'kern' off;
-                            color: #767676;
+                            color: $subtitle-font-color;
                         }
                     }
                 }
             }
-
             .buttonCV {
                 width: 220px;
                 height: 40px;
-                background: #FFB400;
+                background: $secondary-bg-color;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
                 .buttonCVContent {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     width: 141px;
+                    text-decoration: none;
                     &:hover{
                         cursor: pointer;
                     }
