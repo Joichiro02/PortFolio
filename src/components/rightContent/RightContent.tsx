@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const RightContent = () => {
     const navigate = useNavigate();
-    const [active, setActive] = useState(0);
+    const [active, setActive] = useState<number | null>(null);
     const handleClick = (category : string, activeKey : number) => {
         navigate(category);
         setActive(activeKey);

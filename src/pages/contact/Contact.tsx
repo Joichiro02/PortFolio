@@ -2,11 +2,32 @@ import {map} from "../../assets/images";
 import {GiFlyingFlag} from "react-icons/gi";
 import {BsFillPhoneFill} from "react-icons/bs";
 import {MdEmail} from "react-icons/md";
+import {motion} from "framer-motion";
 import "./styles.scss";
 
 const Contact = () => {
+    const containerVariant = {
+        hidden: {
+            opacity: 0,
+            x: "100vw"
+        },
+        visible: {
+            x:0,
+            opacity: 1,
+            transition: {type: "spring", delay: .7, duration: 1.5}
+        },
+        exit:{
+            x: "-100vw",
+            transition: {ease: "easeInOut", duration: 1}
+        }
+    }
     return(
-        <div className="contact">
+        <motion.div className="contact"
+            variants={containerVariant}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <div className="contactContainer">
                 <div className="infoContainer">
                     <h5 className="infoTitle">Leave us your info</h5>
@@ -96,7 +117,7 @@ const Contact = () => {
             <div className="mapContainer">
                 <img className="map" src={map} alt="" />
             </div>
-        </div>
+        </motion.div>
     )
 }
 

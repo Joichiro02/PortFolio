@@ -34,12 +34,32 @@ $subtitle-font-color: #767676;
             border-radius: 50%;
             position: relative;
             background-color: rgb(248, 245, 245);
-            transition: all 1s ease;
-            &::before{
-                top: 0;
-            }
             &::after{
-                top: 0;
+                position: absolute;
+                content: attr(datatype);
+                width: 65px;
+                height: 24px;
+                background-color: $title-font-color;
+                transform: translateY(-11px);
+                opacity: 0;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                color: #FFFFFF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .5s ease;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                height: 10px;
+                width: 10px;
+                background-color: $title-font-color;
+                transform: translateY(0px) rotateZ(45deg);
+                opacity: 0;
+                transition: all .5s ease;
             }
             &.active{
                 background: $secondary-bg-color;
@@ -47,31 +67,13 @@ $subtitle-font-color: #767676;
                     color: $title-font-color;
                 }
                 &::after {
-                    position: absolute;
-                    content: attr(datatype);
-                    width: 65px;
-                    height: 24px;
-                    background-color: $title-font-color;
-                    top: -30px;
-                    font-weight: 500;
-                    font-size: 12px;
-                    line-height: 15px;
-                    color: #FFFFFF;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all 1s ease;
+                    transform: translateY(-40px);
+                    opacity: 1;
                 }
 
                 &::before {
-                    position: absolute;
-                    content: "";
-                    height: 10px;
-                    width: 10px;
-                    background-color: $title-font-color;
-                    top: -14px;
-                    transform: rotateZ(45deg);
-                    transition: all 1s ease;
+                    transform: translateY(-29px) rotateZ(45deg);
+                    opacity: 1;
                 }
             }
             &:hover {
@@ -82,30 +84,13 @@ $subtitle-font-color: #767676;
                     color: $title-font-color;
                 }
                 &::after{
-                    position: absolute;
-                    content: attr(datatype);
-                    width: 65px;
-                    height: 24px;
-                    background-color: $title-font-color;
-                    top: -30px;
-                    font-weight: 500;
-                    font-size: 12px;
-                    line-height: 15px;
-                    color: #FFFFFF;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all 1s ease;
+                    transform: translateY(-40px);
+                    opacity: 1;
+                    cursor: default;
                 }
                 &::before{
-                    position: absolute;
-                    content: "";
-                    height: 10px;
-                    width: 10px;
-                    background-color: $title-font-color;
-                    top: -14px;
-                    transform: rotateZ(45deg);
-                    transition: all 1s ease;
+                    transform: translateY(-29px) rotateZ(45deg);
+                    opacity: 1;
                 }
             }
             .icon {
