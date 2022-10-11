@@ -7,12 +7,25 @@ import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { useNavigate } from "react-router-dom";
 
-const RightContent = () => {
+interface DataTypes {
+    themeMode : string;
+    setThemeMode : React.Dispatch<React.SetStateAction<string>>;
+}
+
+const RightContent : React.FC<DataTypes> = ({themeMode, setThemeMode}) => {
     const navigate = useNavigate();
     const [active, setActive] = useState<number | null>(null);
     const handleClick = (category : string, activeKey : number) => {
         navigate(category);
         setActive(activeKey);
+    }
+    const handleTheme = () => {
+        if(themeMode === "lightMode"){
+            setThemeMode("darkMode");
+        }
+        else {
+            setThemeMode("lightMode");
+        }
     }
     useEffect(() => {
         const pathName = window.location.pathname;
@@ -44,7 +57,7 @@ const RightContent = () => {
     }, [])
     return(
         <div className="rightNav">
-                <RiContrast2Fill className="contrast"/>
+                <RiContrast2Fill className="contrast" onClick={handleTheme}/>
                 <div className="menu">
                     <span datatype="Home" className={classNames("iconContent",{"active": active === 0})} onClick={() => handleClick("/", 0)}>
                         <RiHome2Fill className="icon"/>

@@ -21,6 +21,7 @@ const Home = () => {
     }
     return(
         <motion.div
+            className="homeContainer"
             variants={containerVariant}
             initial="hidden"
             animate="visible"

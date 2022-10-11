@@ -1,8 +1,3 @@
-$main-bg-color: #FFFFFF;
-$secondary-bg-color: #FFB400;
-$title-font-color: #2B2B2B;
-$subtitle-font-color: #767676;
-
 .portfolio {
     padding: 20px 0;
     display: flex;
@@ -13,7 +8,7 @@ $subtitle-font-color: #767676;
         font-size: 32px;
         line-height: 123.6%;
         text-transform: capitalize;
-        color: $title-font-color;
+        color: var(--title-font-color);
     }
     .description {
         margin: 25px 0 0;
@@ -24,7 +19,7 @@ $subtitle-font-color: #767676;
         line-height: 24px;
         text-align: center;
         text-transform: capitalize;
-        color: $subtitle-font-color;
+        color: var(--subtitle-font-color);
     }
     .categories{
         margin: 50px 0 0;
@@ -38,12 +33,12 @@ $subtitle-font-color: #767676;
             font-size: 18px;
             line-height: 123.6%;
             text-transform: capitalize;
-            color: $title-font-color;
+            color: var(--title-font-color);
             &.active{
-                color: $secondary-bg-color;
+                color: var(--themeColor);
             }
             &:hover{
-                color: $secondary-bg-color;
+                color: var(--themeColor);
                 cursor: pointer;
             }
         }

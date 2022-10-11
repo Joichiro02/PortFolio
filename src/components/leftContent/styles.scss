@@ -1,15 +1,10 @@
-$main-bg-color: #FFFFFF;
-$secondary-bg-color: #FFB400;
-$title-font-color: #2B2B2B;
-$subtitle-font-color: #767676;
-
 .leftMenu {
     width: 290px;
     height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: $main-bg-color;
+    background-color: var(--main-bg-color);
     .profile {
         margin: 50px 46px 0 40px;
         width: 219px;
@@ -29,7 +24,7 @@ $subtitle-font-color: #767676;
             display: flex;
             align-items: center;
             text-transform: capitalize;
-            color: $title-font-color;
+            color: var(--title-font-color);
         }
         .positionName {
             margin: 15px 0;
@@ -37,7 +32,7 @@ $subtitle-font-color: #767676;
             font-size: 15px;
             line-height: 24px;
             text-transform: capitalize;
-            color: $subtitle-font-color;
+            color: var(--subtitle-font-color);
         }
         .socialIcon {
             width: 219px;
@@ -87,12 +82,15 @@ $subtitle-font-color: #767676;
                         width: fit-content;
                         padding: 0 5px;
                         height: 24px;
-                        background: $secondary-bg-color;
+                        background: var(--themeColor);
                         font-weight: 400;
                         font-size: 15px;
                         line-height: 24px;
                         text-transform: capitalize;
-                        color: $title-font-color;
+                        color: var(--title-font-color);
+                    }
+                    .value{
+                        color: var(--title-font-color);
                     }
                 }
             }
@@ -104,7 +102,7 @@ $subtitle-font-color: #767676;
                     font-size: 18px;
                     line-height: 123.6%;
                     text-transform: capitalize;
-                    color: $title-font-color;
+                    color: var(--title-font-color);
                 }
                 .languageTypes {
                     margin: 15px 0 0;
@@ -126,20 +124,24 @@ $subtitle-font-color: #767676;
                             align-items: center;
                             justify-content: space-between;
                             width: 100%;
+                            .language,
+                            .percentage{
+                                color: var(--title-font-color);
+                            }
                         }
                         .progress {
                             margin: 10px 0;
                             width: 100%;
                             height: 6px;
-                            border: 0.5px solid $secondary-bg-color;
+                            border: 0.5px solid var(--themeColor);
                             border-radius: 30px;
                             &::-webkit-progress-bar {
                                 padding: 1px;
                                 border-radius: 30px;
-                                background-color: $main-bg-color;
+                                background-color: var(--main-bg-color);
                             }
                             &::-webkit-progress-value {
-                                background: $secondary-bg-color;
+                                background: var(--themeColor);
                                 border-radius: 30px;
                                 height: 2px;
                             }
@@ -155,7 +157,7 @@ $subtitle-font-color: #767676;
                     font-size: 18px;
                     line-height: 123.6%;
                     text-transform: capitalize;
-                    color: $title-font-color;
+                    color: var(--title-font-color);
                 }
                 .skillsTypes {
                     margin: 15px 0 0;
@@ -177,20 +179,24 @@ $subtitle-font-color: #767676;
                             align-items: center;
                             justify-content: space-between;
                             width: 100%;
+                            .skill,
+                            .percentage {
+                                color: var(--title-font-color);
+                            }
                         }
                         .progress {
                             margin: 10px 0;
                             width: 100%;
                             height: 6px;
-                            border: 0.5px solid $secondary-bg-color;
+                            border: 0.5px solid var(--themeColor);
                             border-radius: 30px;
                             &::-webkit-progress-bar {
                                 padding: 1px;
                                 border-radius: 30px;
-                                background-color: $main-bg-color;
+                                background-color: var(--main-bg-color);
                             }
                             &::-webkit-progress-value {
-                                background: $secondary-bg-color;
+                                background: var(--themeColor);
                                 border-radius: 30px;
                                 height: 2px;
                             }
@@ -206,7 +212,7 @@ $subtitle-font-color: #767676;
                     font-size: 18px;
                     line-height: 123.6%;
                     text-transform: capitalize;
-                    color: $title-font-color;
+                    color: var(--title-font-color);
                 }
                 .extraSkillsTypes {
                     display: flex;
@@ -231,7 +237,7 @@ $subtitle-font-color: #767676;
                             font-size: 15px;
                             line-height: 24px;
                             text-transform: capitalize;
-                            color: $subtitle-font-color;
+                            color: var(--subtitle-font-color);
                         }
                     }
                 }
@@ -239,7 +245,7 @@ $subtitle-font-color: #767676;
             .buttonCV {
                 width: 220px;
                 height: 40px;
-                background: $secondary-bg-color;
+                background: var(--themeColor);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -258,7 +264,7 @@ $subtitle-font-color: #767676;
                         font-size: 14px;
                         line-height: 17px;
                         text-transform: uppercase;
-                        color: #2B2B2B;
+                        color: var(--title-font-color);
                     }
                     .downloadIcon {
                         width: 16px;

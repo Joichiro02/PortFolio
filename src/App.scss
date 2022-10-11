@@ -1,6 +1,24 @@
+.lightMode{
+  --main-bg-color: #FFFFFF;
+  --title-font-color: #2B2B2B;
+  --subtitle-font-color: #767676;
+  --container-bg: #E5E5E5;
+  --mode-icon-color: rgb(43, 43, 43);
+  --icon-color: rgb(118, 118, 118);
+  --icon-bg-color: rgb(248, 245, 245);
+}
+.darkMode{
+  --main-bg-color: rgb(36, 37, 38);
+  --title-font-color: rgb(250, 250, 250);
+  --subtitle-font-color: rgb(228, 230, 235);
+  --container-bg: rgb(24, 25, 26);
+  --mode-icon-color: #FFF;
+  --icon-color: rgb(58, 59, 60);
+  --icon-bg-color:  rgb(118, 118, 118);
+}
 .App{
   display: flex;
-  background-color: #E5E5E5;
+  background-color: var(--container-bg);
   width: 100vw;
   height: 100vh;
   justify-content: space-between;
@@ -17,6 +35,98 @@
       width: 970px;
     }
   }
+}
+
+.gear {
+  z-index: 20;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  top: 90vh;
+  right: 90px;
+
+  .gearIcon {
+    font-size: 40px;
+  }
+  .colorsContainer{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background-color: #767676;
+    top: -250px;
+    left: -350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+
+    .colorsContent{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      span{
+        height: 40px;
+        width: 40px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: #a37346;
+        &:nth-of-type(1){
+          background-color: rgb(16, 219, 246);
+        }
+        &:nth-of-type(2){
+          background-color: rgb(53, 245, 136);
+        }
+        &:nth-of-type(3){
+          background-color: rgb(255, 73, 200);
+        }
+        &:nth-of-type(4){
+          background-color: rgb(240, 93, 70);
+        }
+        &:nth-of-type(5){
+          background-color: #fdae38;
+        }
+        &:nth-of-type(6){
+          background-color: linear-gradient(to right, #cc6c06, #2d2b2b);
+        }
+        &:nth-of-type(7){
+          background-color: #a37346;
+        }
+      }
+    }
+  }
+}
+
+
+// theme template colors
+
+#template-1 {
+  --themeColor: rgb(16, 219, 246);
+}
+
+#template-2 {
+  --themeColor: rgb(53, 245, 136);
+}
+
+#template-3 {
+  --themeColor: rgb(255, 73, 200);
+}
+
+#template-4 {
+  --themeColor: rgb(240, 93, 70);
+}
+
+#template-5 {
+  --themeColor: #fdae38;
+}
+
+#template-6 {
+  --themeColor: linear-gradient(to right, #cc6c06, #2d2b2b);
+}
+
+#template-7 {
+  --themeColor: #a37346;
 }
 
 /* @media screen and (max-width: 1370px) {

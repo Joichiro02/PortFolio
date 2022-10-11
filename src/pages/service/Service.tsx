@@ -3,6 +3,7 @@ import {BsCheck2, BsPersonCircle} from "react-icons/bs";
 import {AiOutlinePlus, AiFillStar} from "react-icons/ai";
 import { motion } from "framer-motion";
 import "./styles.scss";
+import Footer from "../../components/footer/Footer";
 
 const offerServices = [
     {
