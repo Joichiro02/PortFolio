@@ -6,6 +6,7 @@
   --mode-icon-color: rgb(43, 43, 43);
   --icon-color: rgb(118, 118, 118);
   --icon-bg-color: rgb(248, 245, 245);
+  --box-shadow: 0 0 15px 0px #08080873;
 }
 .darkMode{
   --main-bg-color: rgb(36, 37, 38);
@@ -15,6 +16,7 @@
   --mode-icon-color: #FFF;
   --icon-color: rgb(58, 59, 60);
   --icon-bg-color:  rgb(118, 118, 118);
+  --box-shadow: 0 0 15px 0px #d4d4d44c;
 }
 .App{
   display: flex;
@@ -47,51 +49,140 @@
 
   .gearIcon {
     font-size: 40px;
+    color: var(--themeColor);
+    animation: spinner 5s infinite ease;
+    &:hover{
+      cursor: pointer;
+    }
   }
   .colorsContainer{
     position: absolute;
-    width: 400px;
+    width: 420px;
     height: 200px;
-    background-color: #767676;
+    background-color: var(--container-bg);
     top: -250px;
-    left: -350px;
+    transform: translateX(400px);
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    box-shadow: var(--box-shadow);
+    transition: all 1.5s ease;
+    &.open{
+      transform: translateX(-360px);
+    }
+    .headerContent{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 20px;
+      .header{
+        color: var(--title-font-color);
+      }
+      .close{
+        color: var(--themeColor);
+        transform: rotateZ(45deg);
+        font-size: 25px;  
+        transition: all 1s ease;
+        &:hover{
+          cursor: pointer ;
+          transform: rotateZ(315deg);
+        }
+      }
+    }
+    .modeContent{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 150px;
+      height: 50px;
+      .sunContainer,
+      .moonContainer{
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        background-color: var(--container-bg);
+        box-shadow: var(--box-shadow);
+        border-radius: 5px;
+        .sun,
+        .moon{
+          display: block;
+          font-size: 30px;
+          color: var(--themeColor);
+          transition: all 1.5s ease;
+        }
+        &:hover {
+          cursor: pointer;
+          .sun,
+          .moon{
+            transform: rotateZ(360deg);
+          }
+        }
+        &.active{
+          border: 1px solid var(--themeColor);
+        }
+      }
+    }
 
 
     .colorsContent{
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-evenly;
       width: 100%;
-      span{
-        height: 40px;
-        width: 40px;
-        border-top-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        background-color: #a37346;
-        &:nth-of-type(1){
+      .templateContainer{
+        background-color: var(--container-bg);
+        box-shadow: var(--box-shadow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        .template1,
+        .template2,
+        .template3,
+        .template4,
+        .template5,
+        .template6,
+        .template7{
+          display: inline-block;
+          height: 25px;
+          width: 25px;
+          border-top-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+        .template1{
           background-color: rgb(16, 219, 246);
         }
-        &:nth-of-type(2){
+        .template2{
           background-color: rgb(53, 245, 136);
         }
-        &:nth-of-type(3){
+        .template3{
           background-color: rgb(255, 73, 200);
         }
-        &:nth-of-type(4){
+        .template4{
           background-color: rgb(240, 93, 70);
         }
-        &:nth-of-type(5){
+        .template5{
           background-color: #fdae38;
         }
-        &:nth-of-type(6){
-          background-color: linear-gradient(to right, #cc6c06, #2d2b2b);
+        .template6{
+          background-color: rgb(240, 70, 81);
         }
-        &:nth-of-type(7){
+        .template7{
           background-color: #a37346;
+        }
+        &:hover{
+          cursor: pointer;
+          span{
+            animation: rubberBand 1s;
+          }
+        }
+        &.active {
+          border: 1px solid var(--themeColor);
         }
       }
     }
@@ -122,13 +213,24 @@
 }
 
 #template-6 {
-  --themeColor: linear-gradient(to right, #cc6c06, #2d2b2b);
+  --themeColor: rgb(240, 70, 81);
 }
 
 #template-7 {
   --themeColor: #a37346;
 }
 
+@keyframes spinner {
+  0%{
+    transform: rotateZ(0deg) scale(1);
+  }
+  50%{
+    transform: rotateZ(180deg) scale(1.2);
+  }
+  100%{
+    transform: translateZ(0deg) scale(1);
+  }
+}
 /* @media screen and (max-width: 1370px) {
   .App {
     zoom: .934;
