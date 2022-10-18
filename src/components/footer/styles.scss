@@ -11,6 +11,7 @@
         .logo{
             width: 140px;
             height: 140px;
+            filter: drop-shadow(1px 2px 0px var(--themeColor));
         }
     }
     .footerContent{
@@ -24,7 +25,7 @@
         font-size: 15px;
         line-height: 24px;
         text-transform: capitalize;
-        color: var(--title-font-color);
+        color: var(--themeColor);
         margin: 89px 0 0;
     }
 }

@@ -1,4 +1,4 @@
-import {RiBriefcase4Fill, RiContrast2Fill, RiHome2Fill} from "react-icons/ri";
+import {RiBriefcase4Fill, RiHome2Fill} from "react-icons/ri";
 import {FaFileCode, FaUserGraduate} from "react-icons/fa";
 import {GiFeather} from "react-icons/gi";
 import {BsFillChatLeftFill} from "react-icons/bs";
@@ -43,7 +43,6 @@ const RightContent : React.FC = () => {
     }, [])
     return(
         <div className="rightNav">
-                <RiContrast2Fill className="contrast"/>
                 <div className="menu">
                     <span datatype="Home" className={classNames("iconContent",{"active": active === 0})} onClick={() => handleClick("/", 0)}>
                         <RiHome2Fill className="icon"/>

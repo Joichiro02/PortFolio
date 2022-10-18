@@ -204,9 +204,14 @@
                     margin: 21px;
                     height: 38px;
                     width: 169px;
-                    background: var(--main-bg-color);
-                    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+                    background: var(--themeColor);
+                    box-shadow: 0px 1px 10px var(--themeColor);
                     border-radius: 30px;
+                    color: var(--subtitle-font-color);
+                    &:hover{
+                        cursor: pointer;
+                        background-color: var(--themeColor);
+                    }
                 }
             }
         }
@@ -286,7 +291,7 @@
                     width: 100%;
                     .personImg{
                         font-size: 80px;
-                        color: var(--subtitle-font-color);
+                        color: var(--themeColor);
                     }
                     .info{
                         margin: 0 0 0 13px;

@@ -11,7 +11,7 @@ const Footer = () => {
                 <img className="logo" src={frame3} alt="" />
             </div>
             <div className="footerContent">
-                2021 All Rights Reserved
+                2022 All Rights Reserved
             </div>
         </div>
     )

@@ -15,9 +15,15 @@
                 font-size: 48px;
                 line-height: 123.6%;
                 color: var(--title-font-color);
-                span {
+
+                .text:hover{
+                    display: inline-block;
+                    animation: rubberBand .5s;
                     color: var(--themeColor);
-                    ;
+                }
+
+                .frontEndText {
+                   color: var(--themeColor);
                 }
             }
             .subtitle {
@@ -75,9 +81,10 @@
                 }
             }
         }
-        img {
+        .personImg {
             width: 326px;
             height: 467px;
+            filter: drop-shadow(0px 0px 5px var(--themeColor));
         }
     }
 }
